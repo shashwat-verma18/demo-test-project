@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Company Reviews</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="review-form">
+            <h2><center>Submit a Review</center></h2>
+            <form id="reviewForm">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" required>
+
+                <label for="pros">Pros:</label>
+                <textarea id="pros" required></textarea>
+
+                <label for="cons">Cons:</label>
+                <textarea id="cons" required></textarea>
+
+                <label for="rating">Rating:</label>
+            </form>
+                <form class="rate">
+                    <label>
+                      <input type="radio" name="stars" value="1" />
+                      <span class="icon">★</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="2" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="3" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>   
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="4" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="5" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                    </label>
+                </form>
+
+                <button type="button" onclick="submitReview()">Submit</button>
+            
+        </div>
+
+        <div class="rating-form">
+            <h2>Check Company Rating</h2>
+            <form id="ratingCheckForm">
+                <label for="checkCompanyName">Company Name:</label>
+                <input type="text" id="checkCompanyName" required>
+
+                <button type="button" onclick="checkRating()">Check Rating</button>
+            </form>
+            <div id="ratingDisplay"></div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
